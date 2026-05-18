@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "level": "A1",
+    "german": "Guten Morgen! Wie geht es Ihnen?",
+    "english": "Good morning! How are you?"
+  },
+  {
+    "id": 2,
+    "level": "A1",
+    "german": "Darf ich mich kurz vorstellen?",
+    "english": "May I briefly introduce myself?"
+  },
+  {
+    "id": 3,
+    "level": "A1",
+    "german": "Wo ist die nächste U-Bahn-Station?",
+    "english": "Where is the nearest subway station?"
+  },
+  {
+    "id": 4,
+    "level": "A1",
+    "german": "Ich hätte gerne ein Glas Wasser, bitte.",
+    "english": "I would like a glass of water, please."
+  },
+  {
+    "id": 5,
+    "level": "A1",
+    "german": "Was kostet das, bitte?",
+    "english": "How much does this cost, please?"
+  },
+  {
+    "id": 6,
+    "level": "A1",
+    "german": "Entschuldigung, sprechen Sie Englisch?",
+    "english": "Excuse me, do you speak English?"
+  },
+  {
+    "id": 7,
+    "level": "A1",
+    "german": "Ich verstehe das nicht.",
+    "english": "I don't understand that."
+  },
+  {
+    "id": 8,
+    "level": "A1",
+    "german": "Können Sie das bitte wiederholen?",
+    "english": "Can you please repeat that?"
+  },
+  {
+    "id": 9,
+    "level": "A1",
+    "german": "Ich habe mich verlaufen. Wo bin ich?",
+    "english": "I got lost. Where am I?"
+  },
+  {
+    "id": 10,
+    "level": "A1",
+    "german": "Ich wohne in Berlin. Wo wohnen Sie?",
+    "english": "I live in Berlin. Where do you live?"
+  },
+  {
+    "id": 11,
+    "level": "A1",
+    "german": "Ich bin satt, danke. Es war sehr lecker!",
+    "english": "I'm full, thank you. It was very delicious!"
+  },
+  {
+    "id": 12,
+    "level": "A1",
+    "german": "Wie spät ist es?",
+    "english": "What time is it?"
+  },
+  {
+    "id": 13,
+    "level": "A1",
+    "german": "Der Zug fährt um neun Uhr ab.",
+    "english": "The train departs at nine o'clock."
+  },
+  {
+    "id": 14,
+    "level": "A1",
+    "german": "Ich möchte einen Kaffee bestellen.",
+    "english": "I would like to order a coffee."
+  },
+  {
+    "id": 15,
+    "level": "A1",
+    "german": "Haben Sie einen Tisch für zwei Personen?",
+    "english": "Do you have a table for two people?"
+  },
+  {
+    "id": 16,
+    "level": "A1",
+    "german": "Stimmt so, danke!",
+    "english": "Keep the change, thanks!"
+  },
+  {
+    "id": 17,
+    "level": "A1",
+    "german": "Ich bin krank. Wo ist ein Arzt?",
+    "english": "I am sick. Where is a doctor?"
+  },
+  {
+    "id": 18,
+    "level": "A1",
+    "german": "Hilfe! Bitte rufen Sie die Polizei!",
+    "english": "Help! Please call the police!"
+  },
+  {
+    "id": 19,
+    "level": "A1",
+    "german": "Auf Wiedersehen und einen schönen Tag!",
+    "english": "Goodbye and have a nice day!"
+  },
+  {
+    "id": 20,
+    "level": "A1",
+    "german": "Können Sie mir bitte helfen?",
+    "english": "Can you please help me?"
+  }
+]

@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "level": "A2",
+    "german": "Ich arbeite seit drei Jahren als Ingenieur.",
+    "english": "I have been working as an engineer for three years."
+  },
+  {
+    "id": 2,
+    "level": "A2",
+    "german": "Können Sie mir den Weg zum Bahnhof erklären?",
+    "english": "Can you explain the way to the train station?"
+  },
+  {
+    "id": 3,
+    "level": "A2",
+    "german": "Ich habe gestern einen Film gesehen.",
+    "english": "I watched a movie yesterday."
+  },
+  {
+    "id": 4,
+    "level": "A2",
+    "german": "Was machen Sie in Ihrer Freizeit?",
+    "english": "What do you do in your free time?"
+  },
+  {
+    "id": 5,
+    "level": "A2",
+    "german": "Ich fahre jeden Tag mit dem Fahrrad zur Arbeit.",
+    "english": "I cycle to work every day."
+  },
+  {
+    "id": 6,
+    "level": "A2",
+    "german": "Darf ich das Fenster aufmachen?",
+    "english": "May I open the window?"
+  },
+  {
+    "id": 7,
+    "level": "A2",
+    "german": "Ich hätte gerne ein Zimmer für zwei Nächte.",
+    "english": "I would like a room for two nights."
+  },
+  {
+    "id": 8,
+    "level": "A2",
+    "german": "Das Essen hat mir sehr gut geschmeckt.",
+    "english": "I really enjoyed the food."
+  },
+  {
+    "id": 9,
+    "level": "A2",
+    "german": "Wann fährt der nächste Bus nach Hause?",
+    "english": "When does the next bus home leave?"
+  },
+  {
+    "id": 10,
+    "level": "A2",
+    "german": "Ich muss morgen früh aufstehen.",
+    "english": "I have to get up early tomorrow."
+  },
+  {
+    "id": 11,
+    "level": "A2",
+    "german": "Haben Sie das in einer anderen Größe?",
+    "english": "Do you have this in a different size?"
+  },
+  {
+    "id": 12,
+    "level": "A2",
+    "german": "Ich suche eine günstige Wohnung in der Nähe.",
+    "english": "I am looking for an affordable apartment nearby."
+  },
+  {
+    "id": 13,
+    "level": "A2",
+    "german": "Kann ich mit Karte bezahlen?",
+    "english": "Can I pay by card?"
+  },
+  {
+    "id": 14,
+    "level": "A2",
+    "german": "Ich habe meinen Schlüssel verloren.",
+    "english": "I have lost my key."
+  },
+  {
+    "id": 15,
+    "level": "A2",
+    "german": "Können wir uns um 10 Uhr treffen?",
+    "english": "Can we meet at 10 o'clock?"
+  },
+  {
+    "id": 16,
+    "level": "A2",
+    "german": "Ich lerne seit sechs Monaten Deutsch.",
+    "english": "I have been learning German for six months."
+  },
+  {
+    "id": 17,
+    "level": "A2",
+    "german": "Ich drücke dir die Daumen!",
+    "english": "I'm keeping my fingers crossed for you!"
+  },
+  {
+    "id": 18,
+    "level": "A2",
+    "german": "Ich mag keine scharfen Speisen.",
+    "english": "I don't like spicy food."
+  },
+  {
+    "id": 19,
+    "level": "A2",
+    "german": "Bitte schreiben Sie Ihre Adresse hier auf.",
+    "english": "Please write your address here."
+  },
+  {
+    "id": 20,
+    "level": "A2",
+    "german": "Ich möchte einen Termin beim Arzt machen.",
+    "english": "I would like to make an appointment with the doctor."
+  }
+]

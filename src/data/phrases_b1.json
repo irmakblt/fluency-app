@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "level": "B1",
+    "german": "Ich bin der Meinung, dass wir mehr Zeit brauchen.",
+    "english": "I am of the opinion that we need more time."
+  },
+  {
+    "id": 2,
+    "level": "B1",
+    "german": "Könnten Sie mir das genauer erläutern?",
+    "english": "Could you explain that in more detail?"
+  },
+  {
+    "id": 3,
+    "level": "B1",
+    "german": "Es wäre schön, wenn wir das gemeinsam lösen könnten.",
+    "english": "It would be nice if we could solve this together."
+  },
+  {
+    "id": 4,
+    "level": "B1",
+    "german": "Ich mache mir Sorgen um die aktuelle Situation.",
+    "english": "I am worried about the current situation."
+  },
+  {
+    "id": 5,
+    "level": "B1",
+    "german": "Soweit ich weiß, beginnt das Meeting um 14 Uhr.",
+    "english": "As far as I know, the meeting starts at 2 p.m."
+  },
+  {
+    "id": 6,
+    "level": "B1",
+    "german": "Das hängt davon ab, wie viel Zeit wir haben.",
+    "english": "That depends on how much time we have."
+  },
+  {
+    "id": 7,
+    "level": "B1",
+    "german": "Ich habe leider keine Ahnung, wovon Sie sprechen.",
+    "english": "Unfortunately I have no idea what you are talking about."
+  },
+  {
+    "id": 8,
+    "level": "B1",
+    "german": "Ich würde das lieber auf später verschieben.",
+    "english": "I would rather postpone that until later."
+  },
+  {
+    "id": 9,
+    "level": "B1",
+    "german": "Einerseits verstehe ich das, andererseits bin ich dagegen.",
+    "english": "On one hand I understand it, on the other hand I'm against it."
+  },
+  {
+    "id": 10,
+    "level": "B1",
+    "german": "Darf ich kurz nachfragen, was Sie damit meinen?",
+    "english": "May I briefly ask what you mean by that?"
+  },
+  {
+    "id": 11,
+    "level": "B1",
+    "german": "Ich hätte das anders gemacht, wenn ich ehrlich bin.",
+    "english": "I would have done it differently, to be honest."
+  },
+  {
+    "id": 12,
+    "level": "B1",
+    "german": "Das klingt interessant, aber ich bin noch nicht überzeugt.",
+    "english": "That sounds interesting, but I'm not convinced yet."
+  },
+  {
+    "id": 13,
+    "level": "B1",
+    "german": "Ich stimme Ihnen zu, allerdings mit Einschränkungen.",
+    "english": "I agree with you, but with some reservations."
+  },
+  {
+    "id": 14,
+    "level": "B1",
+    "german": "Meiner Erfahrung nach dauert das etwa eine Stunde.",
+    "english": "In my experience, that takes about an hour."
+  },
+  {
+    "id": 15,
+    "level": "B1",
+    "german": "Ich habe mich dazu entschieden, die Stelle anzunehmen.",
+    "english": "I have decided to accept the position."
+  },
+  {
+    "id": 16,
+    "level": "B1",
+    "german": "Könnten wir das Thema ein andermal besprechen?",
+    "english": "Could we discuss this topic another time?"
+  },
+  {
+    "id": 17,
+    "level": "B1",
+    "german": "Ich fühle mich in Deutschland sehr wohl.",
+    "english": "I feel very comfortable in Germany."
+  },
+  {
+    "id": 18,
+    "level": "B1",
+    "german": "Es ist wichtig, dass wir offen miteinander kommunizieren.",
+    "english": "It is important that we communicate openly with each other."
+  },
+  {
+    "id": 19,
+    "level": "B1",
+    "german": "Ich habe vor, nächstes Jahr eine Weiterbildung zu machen.",
+    "english": "I plan to do a further training course next year."
+  },
+  {
+    "id": 20,
+    "level": "B1",
+    "german": "Das war nicht so gemeint, wie es geklungen hat.",
+    "english": "That was not meant the way it sounded."
+  }
+]
