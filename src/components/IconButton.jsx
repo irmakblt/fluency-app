@@ -20,11 +20,9 @@ export default function IconButton({ icon, onClick }) {
         cursor: 'pointer',
         userSelect: 'none',
       }}
-      onMouseLeave={() => setPressed(false)}
-      onMouseDown={() => setPressed(true)}
-      onMouseUp={() => { setPressed(false); playSound('/sounds/primary-sound.mp3'); onClick?.(); }}
-      onTouchStart={() => setPressed(true)}
-      onTouchEnd={() => { setPressed(false); playSound('/sounds/primary-sound.mp3'); onClick?.(); }}
+      onPointerLeave={() => setPressed(false)}
+      onPointerDown={() => setPressed(true)}
+      onPointerUp={() => { setPressed(false); playSound('/sounds/primary-sound.mp3'); onClick?.(); }}
     >
       {/* Bottom layer */}
       <div style={{

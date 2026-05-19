@@ -31,11 +31,9 @@ export default function PrimaryButton({ children, onClick, disabled, width = 329
         cursor: disabled ? 'not-allowed' : 'pointer',
         userSelect: 'none',
       }}
-      onMouseLeave={() => setPressed(false)}
-      onMouseDown={() => !disabled && setPressed(true)}
-      onMouseUp={() => { if (!disabled) { setPressed(false); playSound('/sounds/primary-sound.mp3'); onClick?.(); } }}
-      onTouchStart={() => !disabled && setPressed(true)}
-      onTouchEnd={() => { if (!disabled) { setPressed(false); playSound('/sounds/primary-sound.mp3'); onClick?.(); } }}
+      onPointerLeave={() => setPressed(false)}
+      onPointerDown={() => !disabled && setPressed(true)}
+      onPointerUp={() => { if (!disabled) { setPressed(false); playSound('/sounds/primary-sound.mp3'); onClick?.(); } }}
     >
       {/* Bottom layer */}
       <div style={{
