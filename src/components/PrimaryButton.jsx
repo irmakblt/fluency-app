@@ -3,51 +3,67 @@ import { useState } from 'react';
 export default function PrimaryButton({ children, onClick, disabled, width = 329 }) {
   const [pressed, setPressed] = useState(false);
 
-  const bottomBg = disabled ? '#2F3A4F' : '#0B2C69';
-  const topBg = disabled ? '#485E87' : '#1654C7';
-  const topShift = !disabled && pressed ? 4 : 0;
+  let bottomBg, topBg;
+  if (disabled) {
+    bottomBg = '#2F3A4F';
+    topBg = '#485E87';
+  } else if (pressed) {
+    bottomBg = '#08265B';
+    topBg = '#063894';
+  } else {
+    bottomBg = '#0B2C69';
+    topBg = '#1654C7';
+  }
+
+  const translateY = pressed ? 9 : 0;
+  const topShadow = (!pressed && !disabled) ? '0 9px 0 0 rgba(5,25,47,0.3)' : 'none';
+  const layerTransition = pressed
+    ? 'transform 80ms ease-in, background 80ms ease-in'
+    : 'transform 150ms ease-out, background 150ms ease-out';
 
   return (
     <div
       style={{
         position: 'relative',
-        width: width,
+        width,
         height: 60,
         cursor: disabled ? 'not-allowed' : 'pointer',
         userSelect: 'none',
       }}
+      onMouseLeave={() => setPressed(false)}
       onMouseDown={() => !disabled && setPressed(true)}
       onMouseUp={() => { if (!disabled) { setPressed(false); onClick?.(); } }}
-      onMouseLeave={() => setPressed(false)}
       onTouchStart={() => !disabled && setPressed(true)}
       onTouchEnd={() => { if (!disabled) { setPressed(false); onClick?.(); } }}
     >
       {/* Bottom layer */}
       <div style={{
         position: 'absolute',
-        bottom: 0,
+        top: 0,
         left: 0,
-        width: width,
+        width,
         height: 60,
         background: bottomBg,
         borderRadius: 6,
         border: '2px solid #05171F',
+        boxShadow: topShadow,
+        transition: 'background 80ms ease-in, box-shadow 150ms ease',
       }} />
-      {/* Top layer */}
+      {/* Top layer — moves down on press */}
       <div style={{
         position: 'absolute',
-        bottom: 0,
+        top: 0,
         left: 0,
-        width: width,
+        width,
         height: 51,
         background: topBg,
         borderRadius: 6,
         border: '2px solid #05171F',
-        transform: `translateY(-${topShift}px)`,
+        transform: `translateY(${translateY}px)`,
+        transition: layerTransition,
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        transition: pressed ? 'none' : 'transform 0.08s ease-out',
       }}>
         <span style={{
           fontFamily: "'VT323', monospace",

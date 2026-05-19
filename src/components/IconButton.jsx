@@ -2,11 +2,13 @@ import { useState } from 'react';
 
 export default function IconButton({ icon, onClick }) {
   const [pressed, setPressed] = useState(false);
-  const [hovered, setHovered] = useState(false);
 
-  const bottomBg = hovered ? '#825B27' : '#A8752F';
-  const topBg = hovered ? '#B27E36' : '#E19F43';
-  const topShift = pressed ? 4 : 0;
+  const bottomBg = pressed ? '#8C6227' : '#A8752F';
+  const topBg = pressed ? '#C88E3E' : '#E19F43';
+  const shadow = pressed ? 'none' : '0 9px 0 0 rgba(5,25,47,0.3)';
+  const layerTransition = pressed
+    ? 'transform 80ms ease-in, background 80ms ease-in'
+    : 'transform 150ms ease-out, background 150ms ease-out';
 
   return (
     <div
@@ -17,8 +19,7 @@ export default function IconButton({ icon, onClick }) {
         cursor: 'pointer',
         userSelect: 'none',
       }}
-      onMouseEnter={() => setHovered(true)}
-      onMouseLeave={() => { setHovered(false); setPressed(false); }}
+      onMouseLeave={() => setPressed(false)}
       onMouseDown={() => setPressed(true)}
       onMouseUp={() => { setPressed(false); onClick?.(); }}
       onTouchStart={() => setPressed(true)}
@@ -34,8 +35,10 @@ export default function IconButton({ icon, onClick }) {
         background: bottomBg,
         borderRadius: 6,
         border: '2px solid #05171F',
+        boxShadow: shadow,
+        transition: 'background 80ms ease-in, box-shadow 150ms ease',
       }} />
-      {/* Top layer — top-aligned */}
+      {/* Top layer — moves down on press */}
       <div style={{
         position: 'absolute',
         top: 0,
@@ -45,11 +48,11 @@ export default function IconButton({ icon, onClick }) {
         background: topBg,
         borderRadius: 6,
         border: '2px solid #05171F',
-        transform: `translateY(${topShift}px)`,
+        transform: `translateY(${pressed ? 9 : 0}px)`,
+        transition: layerTransition,
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        transition: pressed ? 'none' : 'transform 0.08s ease-out',
       }}>
         <img src={icon} alt="" style={{ width: 26, height: 26 }} />
       </div>

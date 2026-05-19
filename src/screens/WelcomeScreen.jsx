@@ -9,32 +9,37 @@ export default function WelcomeScreen() {
         height: '100%',
         display: 'flex',
         flexDirection: 'column',
-        alignItems: 'center',
-        justifyContent: 'center',
-        padding: '32px 24px 24px',
       }}>
-        <img
-          src={welcomeIcon}
-          alt=""
-          style={{ width: 135, height: 135, marginBottom: 28 }}
-        />
+        {/* Icon: centered in remaining space above the text block */}
+        <div style={{
+          flex: 1,
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+        }}>
+          <img src={welcomeIcon} alt="" style={{ width: 135, height: 135 }} />
+        </div>
+
+        {/* Heading */}
         <span style={{
           fontFamily: "'VT323', monospace",
-          fontSize: 40,
+          fontSize: 47,
           color: '#05171F',
-          textAlign: 'left',
           lineHeight: 1.1,
-          marginBottom: 16,
-          alignSelf: 'flex-start',
+          marginLeft: 20,
+          marginBottom: 20,
         }}>
           FLUENCY LOOKS GOOD ON YOU.
         </span>
+
+        {/* Subheading */}
         <span style={{
           fontFamily: "'VT323', monospace",
           fontSize: 20,
           color: '#05171F',
-          textAlign: 'left',
-          alignSelf: 'flex-start',
+          letterSpacing: '0.03em',
+          marginLeft: 20,
+          marginBottom: 40,
         }}>
           No Chaos. Just Learning.
         </span>

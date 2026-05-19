@@ -7,55 +7,8 @@ function Tab({ label, active, marginLeft, onClick }) {
     PRACTICE: '0 6px 6px 0',
   }[label];
 
-  if (active) {
-    return (
-      <div
-        onClick={onClick}
-        style={{
-          position: 'relative',
-          width: 111,
-          height: 60,
-          cursor: 'pointer',
-          userSelect: 'none',
-          flexShrink: 0,
-          marginLeft,
-        }}
-      >
-        {/* Active bottom layer */}
-        <div style={{
-          position: 'absolute',
-          bottom: 0,
-          left: 0,
-          width: 111,
-          height: 60,
-          background: '#073E20',
-          borderRadius,
-          border: '2px solid #05171F',
-        }} />
-        {/* Active top layer */}
-        <div style={{
-          position: 'absolute',
-          bottom: 0,
-          left: 0,
-          width: 111,
-          height: 51,
-          background: '#075A2C',
-          borderRadius,
-          border: '2px solid #05171F',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-        }}>
-          <span style={{
-            fontFamily: "'VT323', monospace",
-            fontSize: 26,
-            color: '#F2FFE8',
-            letterSpacing: 1,
-          }}>{label}</span>
-        </div>
-      </div>
-    );
-  }
+  const timing = active ? '100ms ease-in' : '200ms ease-out';
+  const transition = `height ${timing}, top ${timing}, background ${timing}, box-shadow ${timing}`;
 
   return (
     <div
@@ -63,44 +16,48 @@ function Tab({ label, active, marginLeft, onClick }) {
       style={{
         position: 'relative',
         width: 111,
-        height: 69,
+        height: active ? 60 : 69,
         cursor: 'pointer',
         userSelect: 'none',
         flexShrink: 0,
         marginLeft,
+        transition: `height ${timing}`,
       }}
     >
-      {/* Inactive bottom layer */}
+      {/* Bottom layer */}
       <div style={{
         position: 'absolute',
         top: 0,
         left: 0,
         width: 111,
-        height: 69,
-        background: '#075A2C',
+        height: active ? 60 : 69,
+        background: active ? '#073E20' : '#075A2C',
         borderRadius,
         border: '2px solid #05171F',
-        boxShadow: '0 9px 0 0 rgba(5,25,47,0.4)',
+        boxShadow: active ? '0 9px 0 0 rgba(5,25,47,0)' : '0 9px 0 0 rgba(5,25,47,0.4)',
+        transition,
       }} />
-      {/* Inactive top layer */}
+      {/* Top layer */}
       <div style={{
         position: 'absolute',
-        top: 0,
+        top: active ? 9 : 0,
         left: 0,
         width: 111,
-        height: 60,
-        background: '#01813F',
+        height: active ? 51 : 60,
+        background: active ? '#075A2C' : '#01813F',
         borderRadius,
         border: '2px solid #05171F',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
+        transition,
       }}>
         <span style={{
           fontFamily: "'VT323', monospace",
           fontSize: 26,
-          color: '#05171F',
+          color: active ? '#F2FFE8' : '#05171F',
           letterSpacing: 1,
+          transition: `color ${timing}`,
         }}>{label}</span>
       </div>
     </div>
