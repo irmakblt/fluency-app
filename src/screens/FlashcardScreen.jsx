@@ -154,7 +154,7 @@ export default function FlashcardScreen({ phrase, onLike, onDislike, learnedCoun
             background: 'repeating-linear-gradient(to right, #05171F 0px, #05171F 6px, transparent 6px, transparent 12px)',
           }} />
 
-          {/* English translation — 25px below divider, left-aligned */}
+          {/* English translation — 20px below divider, left-aligned */}
           <div style={{
             flex: 1,
             display: 'flex',
