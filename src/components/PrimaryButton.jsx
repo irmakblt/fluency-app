@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { playSound } from '../utils/sound';
 
 export default function PrimaryButton({ children, onClick, disabled, width = 329 }) {
   const [pressed, setPressed] = useState(false);
@@ -32,9 +33,9 @@ export default function PrimaryButton({ children, onClick, disabled, width = 329
       }}
       onMouseLeave={() => setPressed(false)}
       onMouseDown={() => !disabled && setPressed(true)}
-      onMouseUp={() => { if (!disabled) { setPressed(false); onClick?.(); } }}
+      onMouseUp={() => { if (!disabled) { setPressed(false); playSound('/sounds/primary-sound.mp3'); onClick?.(); } }}
       onTouchStart={() => !disabled && setPressed(true)}
-      onTouchEnd={() => { if (!disabled) { setPressed(false); onClick?.(); } }}
+      onTouchEnd={() => { if (!disabled) { setPressed(false); playSound('/sounds/primary-sound.mp3'); onClick?.(); } }}
     >
       {/* Bottom layer */}
       <div style={{

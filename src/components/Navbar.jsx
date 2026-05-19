@@ -1,3 +1,5 @@
+import { playSound } from '../utils/sound';
+
 const TABS = ['WELCOME', 'LEVEL', 'PRACTICE'];
 
 function Tab({ label, active, marginLeft, onClick }) {
@@ -12,7 +14,7 @@ function Tab({ label, active, marginLeft, onClick }) {
 
   return (
     <div
-      onClick={onClick}
+      onClick={() => { playSound('/sounds/navbar-sound.mp3', 0.5, 1.3); onClick(); }}
       style={{
         position: 'relative',
         width: 111,

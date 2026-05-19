@@ -1,6 +1,7 @@
 import Card from '../components/Card';
 import arrowLeft from '../assets/icons/level-screen-arrow-left.svg';
 import arrowRight from '../assets/icons/level-screen-arrow-right.svg';
+import { playSound } from '../utils/sound';
 
 const LEVELS = ['A1', 'A2', 'B1'];
 
@@ -24,7 +25,7 @@ export default function LevelSelectionScreen({ selectedLevel, completedLevels, o
           return (
             <div
               key={level}
-              onClick={() => !isCompleted && onSelect(level)}
+              onClick={() => { if (!isCompleted) { playSound('/sounds/level-select-sound.mp3'); onSelect(level); } }}
               style={{
                 display: 'flex',
                 alignItems: 'center',

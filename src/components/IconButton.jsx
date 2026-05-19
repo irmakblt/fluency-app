@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { playSound } from '../utils/sound';
 
 export default function IconButton({ icon, onClick }) {
   const [pressed, setPressed] = useState(false);
@@ -21,9 +22,9 @@ export default function IconButton({ icon, onClick }) {
       }}
       onMouseLeave={() => setPressed(false)}
       onMouseDown={() => setPressed(true)}
-      onMouseUp={() => { setPressed(false); onClick?.(); }}
+      onMouseUp={() => { setPressed(false); playSound('/sounds/primary-sound.mp3'); onClick?.(); }}
       onTouchStart={() => setPressed(true)}
-      onTouchEnd={() => { setPressed(false); onClick?.(); }}
+      onTouchEnd={() => { setPressed(false); playSound('/sounds/primary-sound.mp3'); onClick?.(); }}
     >
       {/* Bottom layer */}
       <div style={{

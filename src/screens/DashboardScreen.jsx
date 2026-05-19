@@ -1,5 +1,6 @@
 import Card from '../components/Card';
 import dashboardIcon from '../assets/icons/dashboard-screen-icon.svg';
+import { playSound } from '../utils/sound';
 
 export default function DashboardScreen({ onOpenLibrary }) {
   return (
@@ -12,7 +13,7 @@ export default function DashboardScreen({ onOpenLibrary }) {
         flexDirection: 'column',
       }}>
         <div
-          onClick={onOpenLibrary}
+          onClick={() => { playSound('/sounds/primary-sound.mp3'); onOpenLibrary(); }}
           style={{
             display: 'flex',
             flexDirection: 'column',
