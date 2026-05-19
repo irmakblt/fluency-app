@@ -243,7 +243,12 @@ export default function App() {
         return <DashboardScreen onOpenLibrary={() => setScreen('learned')} />;
       case 'flashcard':
         return sessionPhrases[cardIndex]
-          ? <FlashcardScreen phrase={sessionPhrases[cardIndex]} onLike={handleLike} onDislike={handleDislike} />
+          ? <FlashcardScreen
+              phrase={sessionPhrases[cardIndex]}
+              onLike={handleLike}
+              onDislike={handleDislike}
+              learnedCount={learnedPhrases[selectedLevel].length + sessionLearnedIds.length}
+            />
           : null;
       case 'learned':
         return <LearnedPhrasesScreen phrases={allLearnedPhrases} />;
