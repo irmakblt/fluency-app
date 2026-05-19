@@ -14,7 +14,7 @@ function Tab({ label, active, marginLeft, onClick }) {
 
   return (
     <div
-      onClick={() => { playSound('/sounds/navbar-sound.mp3', 0.5, 1.3); onClick(); }}
+      onClick={() => { playSound('/sounds/navbar-sound.mp3', 0.5, 1.5); onClick(); }}
       style={{
         position: 'relative',
         width: 111,

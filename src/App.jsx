@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import './index.css';
-import { preloadSounds, unlockAudio } from './utils/sound';
+import { initAudioContext } from './utils/sound';
 
 import Navbar from './components/Navbar';
 import PrimaryButton from './components/PrimaryButton';
@@ -61,13 +61,8 @@ export default function App() {
   }, [selectedLevel, completedLevels, learnedPhrases]);
 
   useEffect(() => {
-    preloadSounds([
-      '/sounds/primary-sound.mp3',
-      '/sounds/navbar-sound.mp3',
-      '/sounds/level-select-sound.mp3',
-    ]);
-    window.addEventListener('pointerdown', unlockAudio, { once: true });
-    return () => window.removeEventListener('pointerdown', unlockAudio);
+    window.addEventListener('pointerdown', initAudioContext, { once: true });
+    return () => window.removeEventListener('pointerdown', initAudioContext);
   }, []);
 
   const activeTab = screen === 'welcome' ? 'WELCOME'

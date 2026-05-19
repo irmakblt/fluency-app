@@ -1,35 +1,34 @@
-const cache = {};
-let unlocked = false;
+let ctx = null;
+const buffers = {};
 
-function getAudio(src) {
-  if (!cache[src]) {
-    const audio = new Audio(src);
-    audio.preload = 'auto';
-    cache[src] = audio;
+// Call once inside a user gesture handler to create and unlock the AudioContext.
+export function initAudioContext() {
+  if (!ctx) {
+    ctx = new (window.AudioContext || window.webkitAudioContext)();
+  } else if (ctx.state === 'suspended') {
+    ctx.resume();
   }
-  return cache[src];
 }
 
-export function preloadSounds(srcs) {
-  srcs.forEach(src => getAudio(src));
-}
-
-// Call once on the first user interaction to prime decoding and unlock iOS audio.
-export function unlockAudio() {
-  if (unlocked) return;
-  unlocked = true;
-  Object.values(cache).forEach(audio => {
-    audio.play().then(() => {
-      audio.pause();
-      audio.currentTime = 0;
-    }).catch(() => {});
-  });
+async function loadBuffer(src) {
+  if (buffers[src]) return buffers[src];
+  const res = await fetch(src);
+  const arrayBuf = await res.arrayBuffer();
+  const audioBuf = await ctx.decodeAudioData(arrayBuf);
+  buffers[src] = audioBuf;
+  return audioBuf;
 }
 
 export function playSound(src, volume = 0.5, playbackRate = 1) {
-  const audio = getAudio(src);
-  audio.volume = volume;
-  audio.playbackRate = playbackRate;
-  audio.currentTime = 0;
-  audio.play().catch(() => {});
+  if (!ctx) return;
+  loadBuffer(src).then(buffer => {
+    const source = ctx.createBufferSource();
+    source.buffer = buffer;
+    source.playbackRate.value = playbackRate;
+    const gain = ctx.createGain();
+    gain.gain.value = volume;
+    source.connect(gain);
+    gain.connect(ctx.destination);
+    source.start(0);
+  }).catch(() => {});
 }
