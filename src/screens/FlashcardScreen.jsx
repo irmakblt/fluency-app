@@ -1,8 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import Card from '../components/Card';
 import IconButton from '../components/IconButton';
-import likeIcon from '../assets/icons/flashcards-screen-like-icon.svg';
-import dislikeIcon from '../assets/icons/flashcards-screen-dislike-icon.svg';
 import soundInactiveIcon from '../assets/icons/phrase-sound-icon-inactive.svg';
 import soundActiveIcon from '../assets/icons/phrase-sound-icon-active.svg';
 
@@ -182,8 +180,8 @@ export default function FlashcardScreen({ phrase, onLike, onDislike, learnedCoun
         width: 329,
         padding: '0 20px',
       }}>
-        <IconButton icon={dislikeIcon} onClick={handleDislike} />
-        <IconButton icon={likeIcon} onClick={handleLike} />
+        <IconButton label="Repeat" onClick={handleDislike} />
+        <IconButton label={"Got it"} onClick={handleLike} />
       </div>
     </>
   );
